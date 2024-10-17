@@ -1,14 +1,15 @@
 import React from "react";
 
-const subInput = () => {
+const SubInput = (props) => {
   return (
     <input
       type="text"
       name="date"
-      dateValue={props.value}
-      onChange={props.onChangeDate}
+      value={props.value}
+      onChange={props.onChange}
+      placeHolder={props.placeholder}
     />
   );
 };
 
-export default subInput;
+export default SubInput;

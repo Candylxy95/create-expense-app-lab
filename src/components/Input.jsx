@@ -1,6 +1,7 @@
 import React from "react";
 import Label from "./Label";
 import Button from "./Button";
+import SubInput from "./subInput";
 
 const Input = (props) => {
   return (
@@ -9,9 +10,7 @@ const Input = (props) => {
         <div>
           <Label name="item" description="Item: " />
           &nbsp;
-          <input
-            type="text"
-            name="item"
+          <SubInput
             value={props.itemValue}
             onChange={props.onChangeItem}
             placeholder="Item Name"
@@ -20,9 +19,7 @@ const Input = (props) => {
         <div>
           <Label name="price" description="Price: " />
           &nbsp;
-          <input
-            type="text"
-            name="price"
+          <SubInput
             value={props.priceValue}
             onChange={props.onChangePrice}
             placeholder="Price"
@@ -31,12 +28,7 @@ const Input = (props) => {
         <div>
           <Label name="Date" description="Date: " />
           &nbsp;
-          <input
-            type="text"
-            name="date"
-            value={props.dateValue}
-            onChange={props.onChangeDate}
-          />
+          <SubInput value={props.dateValue} onChange={props.onChangeDate} />
         </div>
       </section>
       <Button className="button submit" onClick={props.onClick}>
