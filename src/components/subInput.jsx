@@ -7,7 +7,7 @@ const SubInput = (props) => {
       name="date"
       value={props.value}
       onChange={props.onChange}
-      placeHolder={props.placeholder}
+      placeholder={props.placeholder}
     />
   );
 };

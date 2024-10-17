@@ -41,16 +41,18 @@ const App = () => {
 
   return (
     <>
-      <Input
-        itemValue={itemName}
-        priceValue={price}
-        dateValue={date}
-        onChangeItem={(event) => setItemName(event.target.value)}
-        onChangePrice={(event) => setPrice(event.target.value)}
-        onChangeValue={(event) => setDate(event.target.value)}
-        onClick={!isEditing ? handleSubmit : handleEditSubmit}
-        isEditing={isEditing}
-      />
+      <div className="contain">
+        <Input
+          itemValue={itemName}
+          priceValue={price}
+          dateValue={date}
+          onChangeItem={(event) => setItemName(event.target.value)}
+          onChangePrice={(event) => setPrice(event.target.value)}
+          onChangeValue={(event) => setDate(event.target.value)}
+          onClick={!isEditing ? handleSubmit : handleEditSubmit}
+          isEditing={isEditing}
+        />
+      </div>
       <Form
         expenses={expenses}
         deleteBtn={handleDelete}
